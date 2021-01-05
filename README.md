@@ -27,13 +27,14 @@ Backend:
 
 ### Features
 
-User can register.
-User can login by using the credentials he used at the time of registration.
-All the validations has been handled at both, login and registration form.
-User can view all the products on the dashboard including the product he has added or also the products of other users who have posted.
-User can Add to Cart as many as product he'd like.
-Products in Cart, their Amount and Quantity has been managed and keep updating when user add or remove any product.
-User can log out from the App.
+- User can register.
+- User can login by using the credentials he used at the time of registration.
+- All the validations has been handled at both, login and registration form.
+- User can view all the products on the dashboard including the product he has added or also the products of other users who have posted.
+- Products will have necessary information like their Price, Title, Image, Seller Info, Posted on.
+- User can Add to Cart as many as product he'd like.
+- Products in Cart, their Amount and Quantity has been managed and keep updating when user add or remove any product.
+- User can log out from the App.
 
 
 **belongs to [Shadman A Khan](https://github.com/shadmankhan/)**
