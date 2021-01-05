@@ -1,3 +1,37 @@
+## Project - Buy And Sell Web Application.
+
+### Technologies used:
+
+Base: JavaScript
+
+Frontend of the project is built by using React, Material_UI, HTML and CSS and most of all `JavaScript` and it's libraries (or npm packages).
+Major packages used - `react`, `redux`, `material-ui`, `formik`, `lodash`, `react-router-dom`, `yup`, `axios`.
+
+Backend of the project is built on Node Server, which uses express app to run.
+Packages used - `express`, `dotenv`, `cors`, `mongoose`, and as a dev dependency `nodemon`.
+
+Frontend:
+- Reactjs, HTML5 and CSS3 are used create front-end base.
+- Redux and redux-thunk, are used to manage local states of the components in the project.
+- Axios and Native fetch are used for API integration.
+- Formik and formik-material-ui packages are used to create form with npm package Yup for validations.
+- LoDashStatic is a light weighted javascript utility library.
+- `react-router-dom` is used for front-end routing.
+
+Backend:
+- For database, mongoDB has been used throught the project with `mongoose`.
+- `dotenv` and `cors` are used to be able to access the environment variables and to prevent the URL interference from cross-origin.
+- `nodemon` has been used as develop dependency, to make our server running while while continuous development.
+- Express router is used for backend routing.
+
+
+
+
+**belongs to [Shadman A Khan](https://github.com/shadmankhan/)**
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
