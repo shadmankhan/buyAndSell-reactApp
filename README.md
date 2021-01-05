@@ -15,8 +15,9 @@ Frontend:
 - Redux and redux-thunk, are used to manage local states of the components in the project.
 - Axios and Native fetch are used for API integration.
 - Formik and formik-material-ui packages are used to create form with npm package Yup for validations.
-- LoDashStatic is a light weighted javascript utility library.
+- LoDashStatic is a light weighted javascript utility library used to perform javascript functions.
 - `react-router-dom` is used for front-end routing.
+- I used `create-react-app` boiler-plate code to save time :)
 
 Backend:
 - For database, mongoDB has been used throught the project with `mongoose`.
