@@ -1,14 +1,14 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Buy and Sell, frontend directory",
+  "author": "Shadman A Khan <contactshadman@gmail.com>",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

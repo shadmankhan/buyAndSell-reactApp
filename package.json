@@ -1,6 +1,10 @@
 {
   "name": "tailorsoft-problem1",
   "version": "0.1.0",
+  "description": "Buy and Sell, frontend directory",
+  "author": "Shadman A Khan <contactshadman@gmail.com>",
+  "keywords": [],
+  "license": "ISC",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.2",
