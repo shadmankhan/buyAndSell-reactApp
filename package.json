@@ -5,6 +5,10 @@
   "author": "Shadman A Khan <contactshadman@gmail.com>",
   "keywords": [],
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shadmankhan/buyAndSell-reactApp"
+  },
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.2",
