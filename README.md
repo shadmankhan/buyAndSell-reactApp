@@ -13,7 +13,7 @@ Packages used - `express`, `dotenv`, `cors`, `mongoose`, and as a dev dependency
 Frontend:
 - Reactjs, HTML5 and CSS3 are used create front-end base.
 - Redux and redux-thunk, are used to manage local states of the components in the project.
-- Axios and Native fetch are used for API integration.
+- Axios and Native fetch has been used for API integration.
 - Formik and formik-material-ui packages are used to create form with npm package Yup for validations.
 - LoDashStatic is a light weighted javascript utility library used to perform javascript functions.
 - `react-router-dom` is used for front-end routing.
@@ -21,12 +21,11 @@ Frontend:
 
 Backend:
 - For database, mongoDB has been used throught the project with `mongoose`.
-- `dotenv` and `cors` are used to be able to access the environment variables and to prevent the URL interference from cross-origin.
-- `nodemon` has been used as develop dependency, to make our server running while while continuous development.
+- `dotenv` and `cors` are used to be able to access the environment variables and to prevent the URL interference from cross-origin respectively.
+- `nodemon` has been used as developer dependency, to make our server running while continuous development.
 - Express router is used for backend routing.
 
-
-### Features
+### Features:
 
 - User can register.
 - User can login by using the credentials he used at the time of registration.
@@ -37,13 +36,116 @@ Backend:
 - Products in Cart, their Amount and Quantity has been managed and keep updating when user add or remove any product.
 - User can log out from the App.
 
+### Project Structure 
+
+- Backend
+
+├─ backend
+│  ├─ models
+│  │  ├─ product.model.js
+│  │  └─ user.model.js
+│  ├─ node_modules
+│  │  ├───────
+|  |  ... / backend-node_modules /
+│  │  ├───────
+│  ├─ routes
+│  │  ├─ login.js
+│  │  └─ product.js
+│  ├─ .env
+│  ├─ package-lock.json
+│  ├─ package.json
+│  └─ server.js
+
+
+- Frontend
+
+├─ public
+│  ├─ assets
+│  │  └─ login-banner.jpg
+│  ├─ favicon.ico
+│  ├─ index.html
+│  ├─ logo192.png
+│  ├─ logo512.png
+│  ├─ manifest.json
+│  └─ robots.txt
+├─ src
+│  ├─ actions
+│  │  ├─ app.js
+│  │  └─ ui.js
+│  ├─ common
+│  │  ├─ components
+│  │  │  ├─ CartFooter
+│  │  │  │  ├─ CartDetails.jsx
+│  │  │  │  ├─ CartFooter.jsx
+│  │  │  │  └─ index.js
+│  │  │  ├─ CommonToast
+│  │  │  │  ├─ CommonToast.jsx
+│  │  │  │  └─ index.jsx
+│  │  │  ├─ AppLoader.jsx
+│  │  │  ├─ CustomCircularProgress.jsx
+│  │  │  ├─ ModalComponent.jsx
+│  │  │  └─ ProductCard.jsx
+│  │  ├─ constants
+│  │  │  ├─ appRoutes.js
+│  │  │  └─ constants.js
+│  │  ├─ services
+│  │  │  └─ middleware.js
+│  │  └─ utility
+│  │     └─ commonUtility.js
+│  ├─ components
+│  │  ├─ Dashboard
+│  │  │  ├─ components
+│  │  │  │  ├─ Footer
+│  │  │  │  │  ├─ Footer.jsx
+│  │  │  │  │  └─ index.js
+│  │  │  │  ├─ Navbar
+│  │  │  │  │  ├─ Navbar.jsx
+│  │  │  │  │  ├─ Sidebar.jsx
+│  │  │  │  │  └─ index.js
+│  │  │  │  └─ ProductHome
+│  │  │  │     ├─ ProductHome.jsx
+│  │  │  │     └─ index.js
+│  │  │  ├─ Dashboard.jsx
+│  │  │  └─ index.js
+│  │  ├─ Login
+│  │  │  ├─ SignUp
+│  │  │  │  ├─ RegistrationFields.jsx
+│  │  │  │  ├─ SignUp.jsx
+│  │  │  │  └─ index.jsx
+│  │  │  ├─ Login.jsx
+│  │  │  └─ index.js
+│  │  └─ Profile
+│  │     ├─ Profile.jsx
+│  │     └─ index.js
+│  ├─ reducers
+│  │  ├─ app.js
+│  │  ├─ index.js
+│  │  └─ ui.js
+│  ├─ App.css
+│  ├─ App.js
+│  ├─ App.test.js
+│  ├─ AppTemp.jsx
+│  ├─ Routes.jsx
+│  ├─ config.js
+│  ├─ index.css
+│  ├─ index.js
+│  ├─ logo.svg
+│  ├─ reportWebVitals.js
+│  ├─ setupTests.js
+│  └─ store.js
+├─ .eslintcache
+├─ .gitignore
+├─ README.md
+├─ package-lock.json
+└─ package.json
+
 
 **belongs to [Shadman A Khan](https://github.com/shadmankhan/)**
 
 
 
 
-# Getting Started with Create React App
+# Create React App Boiler Plate Starter Instructions
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

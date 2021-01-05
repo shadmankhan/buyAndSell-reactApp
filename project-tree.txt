@@ -1,0 +1,94 @@
+├─ backend
+│  ├─ models
+│  │  ├─ product.model.js
+│  │  └─ user.model.js
+│  ├─ node_modules
+│  │  ├───────
+|  |  ... / backend-node_modules /
+│  │  ├───────
+│  ├─ routes
+│  │  ├─ login.js
+│  │  └─ product.js
+│  ├─ .env
+│  ├─ package-lock.json
+│  ├─ package.json
+│  └─ server.js
+├─ public
+│  ├─ assets
+│  │  └─ login-banner.jpg
+│  ├─ favicon.ico
+│  ├─ index.html
+│  ├─ logo192.png
+│  ├─ logo512.png
+│  ├─ manifest.json
+│  └─ robots.txt
+├─ src
+│  ├─ actions
+│  │  ├─ app.js
+│  │  └─ ui.js
+│  ├─ common
+│  │  ├─ components
+│  │  │  ├─ CartFooter
+│  │  │  │  ├─ CartDetails.jsx
+│  │  │  │  ├─ CartFooter.jsx
+│  │  │  │  └─ index.js
+│  │  │  ├─ CommonToast
+│  │  │  │  ├─ CommonToast.jsx
+│  │  │  │  └─ index.jsx
+│  │  │  ├─ AppLoader.jsx
+│  │  │  ├─ CustomCircularProgress.jsx
+│  │  │  ├─ ModalComponent.jsx
+│  │  │  └─ ProductCard.jsx
+│  │  ├─ constants
+│  │  │  ├─ appRoutes.js
+│  │  │  └─ constants.js
+│  │  ├─ services
+│  │  │  └─ middleware.js
+│  │  └─ utility
+│  │     └─ commonUtility.js
+│  ├─ components
+│  │  ├─ Dashboard
+│  │  │  ├─ components
+│  │  │  │  ├─ Footer
+│  │  │  │  │  ├─ Footer.jsx
+│  │  │  │  │  └─ index.js
+│  │  │  │  ├─ Navbar
+│  │  │  │  │  ├─ Navbar.jsx
+│  │  │  │  │  ├─ Sidebar.jsx
+│  │  │  │  │  └─ index.js
+│  │  │  │  └─ ProductHome
+│  │  │  │     ├─ ProductHome.jsx
+│  │  │  │     └─ index.js
+│  │  │  ├─ Dashboard.jsx
+│  │  │  └─ index.js
+│  │  ├─ Login
+│  │  │  ├─ SignUp
+│  │  │  │  ├─ RegistrationFields.jsx
+│  │  │  │  ├─ SignUp.jsx
+│  │  │  │  └─ index.jsx
+│  │  │  ├─ Login.jsx
+│  │  │  └─ index.js
+│  │  └─ Profile
+│  │     ├─ Profile.jsx
+│  │     └─ index.js
+│  ├─ reducers
+│  │  ├─ app.js
+│  │  ├─ index.js
+│  │  └─ ui.js
+│  ├─ App.css
+│  ├─ App.js
+│  ├─ App.test.js
+│  ├─ AppTemp.jsx
+│  ├─ Routes.jsx
+│  ├─ config.js
+│  ├─ index.css
+│  ├─ index.js
+│  ├─ logo.svg
+│  ├─ reportWebVitals.js
+│  ├─ setupTests.js
+│  └─ store.js
+├─ .eslintcache
+├─ .gitignore
+├─ README.md
+├─ package-lock.json
+└─ package.json
