@@ -46,7 +46,9 @@ Since the app is not yet deployed. To test and run it, follow the steps.
 4. Open the cloned project in to Code editor.
 5. Open command prompt or terminal from /src folder and execute  “npm install” to install the new packages and then use "npm start" command to start the frontend code.
 6. Now, in the terminal, navigate to /src/backend and repeat step 5.
-7. Verify by triggering the URL "http://localhost:3000" in your favorite browser, you will be able to see the application in the browser.
+7. Verify by triggering the URL "http://localhost:3000" in your favorite browser, you will be able to see the application (refer to the screenshot) in the browser.
+
+![Login Screen](https://i.imgur.com/G3UdbHL.jpg)
 
 ### Project Structure 
 
