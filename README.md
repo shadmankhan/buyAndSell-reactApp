@@ -1,8 +1,17 @@
 ## Project - Buy And Sell Web Application.
 
-### Technologies used:
+### Features:
 
-Base: JavaScript
+- User can register.
+- User can login by using the credentials he used at the time of registration.
+- All the validations has been handled at both, login and registration form.
+- User can view all the products on the dashboard including the product he has added or also the products of other users who have posted.
+- Products will have necessary information like their Price, Title, Image, Seller Info, Posted on.
+- User can Add to Cart as many as product he'd like.
+- Products in Cart, their Amount and Quantity has been managed and keep updating when user add or remove any product.
+- User can log out from the App.
+
+### Technologies used:
 
 Frontend of the project is built by using React, Material_UI, HTML and CSS and most of all `JavaScript` and it's libraries (or npm packages).
 Major packages used - `react`, `redux`, `material-ui`, `formik`, `lodash`, `react-router-dom`, `yup`, `axios`.
@@ -25,17 +34,6 @@ Backend:
 - `nodemon` has been used as developer dependency, to make our server running while continuous development.
 - Express router is used for backend routing.
 
-### Features:
-
-- User can register.
-- User can login by using the credentials he used at the time of registration.
-- All the validations has been handled at both, login and registration form.
-- User can view all the products on the dashboard including the product he has added or also the products of other users who have posted.
-- Products will have necessary information like their Price, Title, Image, Seller Info, Posted on.
-- User can Add to Cart as many as product he'd like.
-- Products in Cart, their Amount and Quantity has been managed and keep updating when user add or remove any product.
-- User can log out from the App.
-
 ### Setup Guide
 
 Since the app is not yet deployed. To test and run it, follow the steps.
@@ -54,105 +52,11 @@ Since the app is not yet deployed. To test and run it, follow the steps.
 
 - Backend
 
-├─ backend
-│  ├─ models
-│  │  ├─ product.model.js
-│  │  └─ user.model.js
-│  ├─ node_modules
-│  │  ├───────
-|  |  ... / backend-node_modules /
-│  │  ├───────
-│  ├─ routes
-│  │  ├─ login.js
-│  │  └─ product.js
-│  ├─ .env
-│  ├─ package-lock.json
-│  ├─ package.json
-│  └─ server.js
-
+![Backend](https://i.imgur.com/AGCUlNA.png)
 
 - Frontend
 
-├─ public
-│  ├─ assets
-│  │  └─ login-banner.jpg
-│  ├─ favicon.ico
-│  ├─ index.html
-│  ├─ logo192.png
-│  ├─ logo512.png
-│  ├─ manifest.json
-│  └─ robots.txt
-├─ src
-│  ├─ actions
-│  │  ├─ app.js
-│  │  └─ ui.js
-│  ├─ common
-│  │  ├─ components
-│  │  │  ├─ CartFooter
-│  │  │  │  ├─ CartDetails.jsx
-│  │  │  │  ├─ CartFooter.jsx
-│  │  │  │  └─ index.js
-│  │  │  ├─ CommonToast
-│  │  │  │  ├─ CommonToast.jsx
-│  │  │  │  └─ index.jsx
-│  │  │  ├─ AppLoader.jsx
-│  │  │  ├─ CustomCircularProgress.jsx
-│  │  │  ├─ ModalComponent.jsx
-│  │  │  └─ ProductCard.jsx
-│  │  ├─ constants
-│  │  │  ├─ appRoutes.js
-│  │  │  └─ constants.js
-│  │  ├─ services
-│  │  │  └─ middleware.js
-│  │  └─ utility
-│  │     └─ commonUtility.js
-│  ├─ components
-│  │  ├─ Dashboard
-│  │  │  ├─ components
-│  │  │  │  ├─ Footer
-│  │  │  │  │  ├─ Footer.jsx
-│  │  │  │  │  └─ index.js
-│  │  │  │  ├─ Navbar
-│  │  │  │  │  ├─ Navbar.jsx
-│  │  │  │  │  ├─ Sidebar.jsx
-│  │  │  │  │  └─ index.js
-│  │  │  │  └─ ProductHome
-│  │  │  │     ├─ ProductHome.jsx
-│  │  │  │     └─ index.js
-│  │  │  ├─ Dashboard.jsx
-│  │  │  └─ index.js
-│  │  ├─ Login
-│  │  │  ├─ SignUp
-│  │  │  │  ├─ RegistrationFields.jsx
-│  │  │  │  ├─ SignUp.jsx
-│  │  │  │  └─ index.jsx
-│  │  │  ├─ Login.jsx
-│  │  │  └─ index.js
-│  │  └─ Profile
-│  │     ├─ Profile.jsx
-│  │     └─ index.js
-│  ├─ reducers
-│  │  ├─ app.js
-│  │  ├─ index.js
-│  │  └─ ui.js
-│  ├─ App.css
-│  ├─ App.js
-│  ├─ App.test.js
-│  ├─ AppTemp.jsx
-│  ├─ Routes.jsx
-│  ├─ config.js
-│  ├─ index.css
-│  ├─ index.js
-│  ├─ logo.svg
-│  ├─ reportWebVitals.js
-│  ├─ setupTests.js
-│  └─ store.js
-├─ .eslintcache
-├─ .gitignore
-├─ README.md
-├─ package-lock.json
-└─ package.json
-
+![Frontend](https://i.imgur.com/3Ac4isC.png)
 
 **belongs to [Shadman A Khan](https://github.com/shadmankhan/)**
 
