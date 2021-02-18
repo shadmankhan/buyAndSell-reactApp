@@ -14,7 +14,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import Badge from "@material-ui/core/Badge";
-
+import InputAdornment from '@material-ui/core/InputAdornment';
 import Sidebar from "./Sidebar";
 import { Grid, Icon } from "@material-ui/core";
 import constants from "../../../../common/constants/constants";
@@ -60,21 +60,22 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   searchIcon: {
-    padding: theme.spacing(0, 2),
+    padding: theme.spacing(0),
     height: "100%",
     position: "absolute",
     pointerEvents: "none",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    color:"white",
   },
   inputRoot: {
     color: "inherit",
   },
   inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
+    padding: theme.spacing(1, 1, 1, 1),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+    // paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
@@ -212,19 +213,28 @@ function Navbar(props) {
               Buy&nbsp;&amp;&nbsp;Sell
             </Typography>
           </IconButton>
+
+
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
             <InputBase
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
+              endAdornment={
+                
+                  <IconButton color="inherit">
+                    <SearchIcon  />
+                  </IconButton>
+                }  
+                  
               inputProps={{ "aria-label": "search" }}
             />
           </div>
+
+
+
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <Grid container spacing={3}>

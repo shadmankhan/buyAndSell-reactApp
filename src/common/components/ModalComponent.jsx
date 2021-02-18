@@ -96,9 +96,9 @@ const ModalComponent = ({
           {modalTitle ? (
             <Box className={classes.titleClass}>
               <Typography
-                variant="h5"
+                variant='h5'
                 className={classes.title}
-                display="inline"
+                display='inline'
                 gutterBottom
               >
                 {modalTitle}
@@ -106,7 +106,7 @@ const ModalComponent = ({
             </Box>
           ) : null}
           <div className={classes.close} onClick={onClickAction}>
-            <CloseIcon iconName="close" iconColor="#333333" />
+            <CloseIcon iconName='close' iconColor='#333333' />
           </div>
         </div>
         {children}
@@ -117,7 +117,7 @@ const ModalComponent = ({
 
 ModalComponent.propTypes = {
   children: PropTypes.any,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object,
   detailClassName: PropTypes.string,
   isOpen: PropTypes.bool,
   modalTitle: PropTypes.string,

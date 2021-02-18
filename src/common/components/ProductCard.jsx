@@ -17,10 +17,15 @@ import _, { toUpper } from "lodash";
 import constants from "../constants/constants";
 import dayjs from "dayjs";
 import { Box, Button, Grid, Tooltip } from "@material-ui/core";
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import Fade from "@material-ui/core/Fade";
+import AcUnitIcon from "@material-ui/icons/AcUnit";
 import {
   priceValueFormatter,
   usagePeriodConverter,
 } from "../utility/commonUtility";
+import ModalComponent from "./ModalComponent";
 
 const styles = (theme) => ({
   root: {
@@ -140,6 +145,24 @@ const styles = (theme) => ({
     borderTop: `1px solid ${theme.palette.warning.light}`,
     borderBottom: `1px solid ${theme.palette.warning.light}`,
   },
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: theme.spacing(10, 30, 10),
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: "2px solid #000",
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
+  iconBtn: {
+    // position: "absolute",
+    display: "flex",
+    justifyContent: "flexEnd",
+    float: "right",
+  },
 });
 
 class ProductCard extends React.Component {
@@ -147,6 +170,7 @@ class ProductCard extends React.Component {
     super(props);
     this.state = {
       expanded: false,
+      isModalOpen: false,
     };
   }
 
@@ -155,9 +179,19 @@ class ProductCard extends React.Component {
       expanded: !this.state.expanded,
     });
   };
+  handleOpen = () => {
+    this.setState({
+      isModalOpen: true,
+    });
+  };
+  handleClose = () => {
+    this.setState({
+      isModalOpen: false,
+    });
+  };
 
   render() {
-    const { expanded } = this.state;
+    const { expanded, isModalOpen } = this.state;
     const { product, classes, addToCart, removeFromCart } = this.props;
 
     const productTitle = _.get(product, "productTitle", "");
@@ -185,12 +219,12 @@ class ProductCard extends React.Component {
       <Card className={classes.root}>
         <CardHeader
           avatar={
-            <Avatar aria-label="recipe" className={classes.avatar}>
+            <Avatar aria-label='recipe' className={classes.avatar}>
               {toUpper(sellerName.charAt(0))}
             </Avatar>
           }
           action={
-            <IconButton aria-label="settings">
+            <IconButton aria-label='settings'>
               <MoreVertIcon />
             </IconButton>
           }
@@ -211,7 +245,7 @@ class ProductCard extends React.Component {
         />
         <CardContent>
           <Tooltip title={productTitle}>
-            <Typography variant="body2">
+            <Typography variant='body2'>
               {productTitle.length > 80
                 ? `${productTitle.slice(0, 80)}...`
                 : productTitle}
@@ -219,31 +253,31 @@ class ProductCard extends React.Component {
           </Tooltip>
           {productTitle.length < 45 ? <br /> : ""}
           <br />
-          <Grid container alignItems="baseline">
+          <Grid container alignItems='baseline'>
             <Grid item>
-              <Typography variant="body1">M.R.P.:&nbsp;</Typography>
+              <Typography variant='body1'>M.R.P.:&nbsp;</Typography>
             </Grid>
             <Grid item>
-              <Typography variant="body1" color="error">
+              <Typography variant='body1' color='error'>
                 <strike>{costPrice}</strike>
               </Typography>
             </Grid>
           </Grid>
-          <Grid container alignItems="baseline">
+          <Grid container alignItems='baseline'>
             <Grid item>
-              <Typography variant="body1">Price:&nbsp;</Typography>
+              <Typography variant='body1'>Price:&nbsp;</Typography>
             </Grid>
             <Grid item>
               <Typography
-                variant="body1"
+                variant='body1'
                 className={classes.fW500}
-                color="error"
+                color='error'
               >
                 {sellingPrice}
               </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="caption">
+              <Typography variant='caption'>
                 &nbsp;FREE Scheduled Delivery
               </Typography>
             </Grid>
@@ -278,14 +312,14 @@ class ProductCard extends React.Component {
                 e && e.stopPropagation() && e.stopImmediatePropagation();
                 addToCart(product);
               }}
-              variant="outlined"
+              variant='outlined'
               className={classnames(classes.addedToCartBtn)}
             >
-              <Typography variant="button">{"Add to Cart"}</Typography>
+              <Typography variant='button'>{"Add to Cart"}</Typography>
             </Button>
           )}
 
-          <IconButton
+          {/* <IconButton
             className={classnames(classes.expand, {
               [classes.expandOpen]: expanded,
             })}
@@ -294,10 +328,27 @@ class ProductCard extends React.Component {
             aria-label="show more"
           >
             <ExpandMoreIcon />
+          </IconButton> */}
+          <IconButton onClick={this.handleOpen} className={classes.iconBtn}>
+            <AcUnitIcon />
           </IconButton>
+          <ModalComponent isOpen={isModalOpen} onCloseAction={this.handleClose}>
+            <Grid container>
+              <Grid item xs={3} />
+              <Grid item xs={6}>
+                <Typography variant='h5' id='transition-modal-title'>
+                  {productTitle}
+                </Typography>
+                <Typography variant='body1' id='transition-modal-description'>
+                  {productDescription}
+                </Typography>
+              </Grid>
+              <Grid item xs={3} />
+            </Grid>
+          </ModalComponent>
         </CardActions>
 
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <Collapse in={expanded} timeout='auto' unmountOnExit>
           <CardContent>
             <Typography paragraph>{productDescription}</Typography>
           </CardContent>
