@@ -6,20 +6,15 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import _, { toUpper } from "lodash";
 import constants from "../constants/constants";
 import dayjs from "dayjs";
 import { Box, Button, Grid, Tooltip } from "@material-ui/core";
-import Modal from "@material-ui/core/Modal";
-import Backdrop from "@material-ui/core/Backdrop";
-import Fade from "@material-ui/core/Fade";
 import AcUnitIcon from "@material-ui/icons/AcUnit";
 import {
   priceValueFormatter,
@@ -169,16 +164,10 @@ class ProductCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      expanded: false,
       isModalOpen: false,
     };
   }
 
-  handleExpandClick = () => {
-    this.setState({
-      expanded: !this.state.expanded,
-    });
-  };
   handleOpen = () => {
     this.setState({
       isModalOpen: true,
@@ -191,7 +180,7 @@ class ProductCard extends React.Component {
   };
 
   render() {
-    const { expanded, isModalOpen } = this.state;
+    const { isModalOpen } = this.state;
     const { product, classes, addToCart, removeFromCart } = this.props;
 
     const productTitle = _.get(product, "productTitle", "");
@@ -319,16 +308,6 @@ class ProductCard extends React.Component {
             </Button>
           )}
 
-          {/* <IconButton
-            className={classnames(classes.expand, {
-              [classes.expandOpen]: expanded,
-            })}
-            onClick={this.handleExpandClick}
-            aria-expanded={expanded}
-            aria-label="show more"
-          >
-            <ExpandMoreIcon />
-          </IconButton> */}
           <IconButton onClick={this.handleOpen} className={classes.iconBtn}>
             <AcUnitIcon />
           </IconButton>
@@ -347,12 +326,6 @@ class ProductCard extends React.Component {
             </Grid>
           </ModalComponent>
         </CardActions>
-
-        <Collapse in={expanded} timeout='auto' unmountOnExit>
-          <CardContent>
-            <Typography paragraph>{productDescription}</Typography>
-          </CardContent>
-        </Collapse>
       </Card>
     );
   }
