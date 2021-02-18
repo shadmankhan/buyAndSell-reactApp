@@ -67,6 +67,10 @@ const productSchema = new Schema(
         required: true,
       },
     },
+    limit: {
+      type: Number,
+      required: true
+    }
   },
   {
     timestamps: true,

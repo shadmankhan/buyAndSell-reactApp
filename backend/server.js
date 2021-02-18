@@ -20,10 +20,11 @@ connection.once('open', () => {
 
 const loginRouter = require('./routes/login');
 const productRouter = require('./routes/product');
+const profileRouter = require('./routes/profile');
 
 app.use('/login', loginRouter);
 app.use('/home', productRouter);
-app.use('/profile', productRouter);
+app.use('/profile', profileRouter);
 
 
 app.listen(port, () => {

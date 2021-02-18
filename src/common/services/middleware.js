@@ -8,8 +8,6 @@ const {
   apiConfig: { universalCountries },
 } = config;
 
-console.log(config);
-
 export const getUserInfo = (user) => {
   const encPassword = new Buffer(user.password).toString("base64");
 
@@ -83,6 +81,23 @@ export const fetchProductOfferings = () => {
       return constants.failed;
     });
 };
+
+export const addProduct = (payload) => {
+  const url = `${base_url}/profile/addProduct`;
+
+  return post(url, payload)
+  .then(res => {
+    if (_.get(res, "data.status") === constants.success) {
+      return _.get(res, "data.status");
+    } else {
+      return constants.failed;
+    }
+  })
+  .catch((err) => {
+    console.log(err);
+    return constants.failed;
+  });
+}
 
 export const fetchCountries = async () => {
   const url = `${universalCountries.href}/countries/`;

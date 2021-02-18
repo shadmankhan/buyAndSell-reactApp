@@ -1,11 +1,12 @@
 const appRoutes = {
-  login: '/login',
-  customerRegistration: '/customerRegistration',
+  login: "/login",
+  customerRegistration: "/customerRegistration",
+  profile: "/profile",
   home: {
-    baseurl: '/home',
+    baseurl: "/home",
     PRODUCT: {
-      BASE_URL: '/product',
-    }
-  }
+      BASE_URL: "/product",
+    },
+  },
 };
 export default appRoutes;

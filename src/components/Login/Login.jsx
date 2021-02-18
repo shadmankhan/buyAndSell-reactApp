@@ -302,7 +302,7 @@ class Login extends Component {
                     </Formik>
                     <Grid item xs={12}>
                       <Typography className={classes.textWhite}>
-                        New user,{"  "}
+                        New user,
                         <Typography
                           className={classnames(
                             classes.textWhite,

@@ -178,7 +178,7 @@ function Navbar(props) {
         >
           <AccountCircle />
         </IconButton>
-        <p>Profile</p>
+        <Typography>Profile</Typography>
       </MenuItem>
       <MenuItem onClick={logOut}>
         <IconButton
@@ -189,7 +189,7 @@ function Navbar(props) {
         >
           <ExitToAppIcon />
         </IconButton>
-        <p>Log Out</p>
+        <Typography>Log Out</Typography>
       </MenuItem>
     </Menu>
   );

@@ -151,10 +151,10 @@ export class ProductHome extends Component {
           <Grid item xs={9}>
             Some Advertisement Offers
           </Grid>
-          <Grid item xs={12}>
-            <Grid container spacing={2}>
+          <Grid item xs={10}>
+            <Grid container spacing={4}>
               {products.map((product, index) => {
-                console.log({ product });
+                // console.log({ product });
                 return (
                   <Grid item key={index}>
                     <ProductCard

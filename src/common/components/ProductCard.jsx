@@ -26,7 +26,7 @@ const styles = (theme) => ({
   root: {
     width: "350px",
     // minWidth: "361px",
-    height: "489.06px",
+    // height: "489.06px",
     // maxHeight: "489.06px",
     position: "relative",
   },
@@ -178,6 +178,7 @@ class ProductCard extends React.Component {
     const specialRibbon = _.get(product, "specialRibbon", true);
     const quantity = _.get(product, "quantity", 0);
 
+    const limit = _.get(product, "limit");
     // debugger;
 
     return (
@@ -265,6 +266,7 @@ class ProductCard extends React.Component {
                 <Button
                   className={classes.incBtn}
                   onClick={() => addToCart(product)}
+                  disabled={quantity >= limit ? true : false}
                 >
                   +
                 </Button>

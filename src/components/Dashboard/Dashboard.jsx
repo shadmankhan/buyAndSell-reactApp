@@ -12,9 +12,6 @@ const styles = (theme) => ({
 });
 
 export class Dashboard extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   async componentDidMount() {
     await this.props.setCountryStateCityData();
